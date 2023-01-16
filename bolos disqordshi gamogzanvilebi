@@ -1,0 +1,300 @@
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+public:
+    int age;
+    string eyeColor;
+
+    Animal()
+    {
+        cout << "Animal Constructor is Created" << endl;
+    }
+
+    Animal(int age)
+    {
+        this->age = age;
+        cout << "Animal constructor is created with parametered contructor" << endl;
+    }
+};
+
+class Cat : public Animal
+{
+public:
+    Cat() : Animal(10)
+    {
+        cout << "Cat Constructor is created" << endl;
+    }
+
+    Cat(int age) : Animal(age)
+    {
+        cout << "Cat constructor is created with parameterd constructor" << endl;
+    }
+};
+
+class Dog : public Animal
+{
+};
+
+int main()
+{
+
+    Cat c(30);
+
+    cout << c.age << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Person
+{
+protected:
+    string firstName;
+
+private:
+    string lastName;
+
+public:
+    Person(string firstName, string lastName)
+    {
+        this->firstName = firstName;
+        this->lastName = lastName;
+    }
+
+    string GetFullName()
+    {
+        return this->firstName + " " + this->lastName;
+    }
+
+    void DisplayFullName()
+    {
+        cout << this->firstName << " " << this->lastName << endl;
+    }
+};
+
+class Student : public Person
+{
+public:
+    int nameChangeCount;
+
+    Student(string firstName, string lastName) : Person(firstName, lastName)
+    {
+        this->nameChangeCount = 0;
+    }
+
+    void ChangeName(string firstName)
+    {
+        if (this->nameChangeCount < 3)
+        {
+            this->firstName = firstName;
+            this->nameChangeCount++;
+        }
+    }
+};
+
+int main()
+{
+    Student s("giorgi", "jojua");
+
+    s.DisplayFullName();
+
+    s.ChangeName("nika");
+
+    s.DisplayFullName();
+
+    s.ChangeName("daviti");
+
+    s.DisplayFullName();
+
+    s.ChangeName("nino");
+
+    s.DisplayFullName();
+
+    s.ChangeName("elene");
+
+    s.DisplayFullName();
+
+    return 0;
+}
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Person
+{
+protected:
+    string firstName;
+
+private:
+    string lastName;
+
+public:
+    Person(string firstName, string lastName)
+    {
+        this->firstName = firstName;
+        this->lastName = lastName;
+    }
+
+    string GetFullName()
+    {
+        return this->firstName + " " + this->lastName;
+    }
+
+    void DisplayFullName()
+    {
+        cout << this->firstName << " " << this->lastName << endl;
+    }
+};
+
+class Student : public Person
+{
+
+private:
+    int nameChangeCount;
+
+public:
+    Student(string firstName, string lastName) : Person(firstName, lastName)
+    {
+        this->nameChangeCount = 0;
+    }
+
+    void ChangeName(string firstName)
+    {
+        if (this->nameChangeCount < 3)
+        {
+            this->firstName = firstName;
+            this->nameChangeCount++;
+        }
+    }
+};
+
+int main()
+{
+    Student s("giorgi", "jojua");
+
+    s.DisplayFullName();
+
+    s.ChangeName("nika");
+
+    s.DisplayFullName();
+
+    s.ChangeName("daviti");
+
+    s.DisplayFullName();
+
+    s.ChangeName("nino");
+
+    s.DisplayFullName();
+ 
+    s.ChangeName("elene");
+
+    s.DisplayFullName();
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+int getUpperCaseLettersCount(string word)
+{
+    int lettersCount = 0;
+    int n = word.length();
+    char charArray[n + 1];
+
+    strcpy(charArray, word.c_str());
+
+    for (int i = 0; i < n; i++)
+    {
+        if (charArray[i] >= 97 && charArray[i] <= 97 + 26)
+        {
+            lettersCount++;
+        }
+    }
+
+    return lettersCount;
+}
+
+int main()
+{
+    int x = getUpperCaseLettersCount("SaqarTvelos universiTeTI");
+
+    cout << x;
+
+    return 0;
+}
+
+
+
+
+
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int getUpperCaseLettersCount(string word)
+{
+    int lettersCount = 0;
+    int n = word.length();
+    char charArray[n + 1];
+
+    strcpy(charArray, word.c_str());
+
+    for (int i = 0; i < n; i++)
+    {
+        if (charArray[i] >= 97 && charArray[i] <= 97 + 26)
+        {
+            lettersCount++;
+        }
+    }
+
+    return lettersCount;
+}
+
+int GetSum(int x, int y)
+{
+    return x + y;
+}
+
+double GetSum(double x, double y)
+{
+    return x + y;
+}
+
+int main()
+{
+    // int x = getUpperCaseLettersCount("SaqarTvelos universiTeTI");
+
+    int x = GetSum(10.5, 20.6);
+
+    cout << x;
+
+    return 0;
+}
