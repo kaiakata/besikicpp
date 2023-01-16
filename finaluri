@@ -49,7 +49,7 @@ int main()
 using namespace std;
 
 int fn1(){
-    cout << user("valeri", "potato") << " " << perosn("valeri", "datuashvili");
+    cout << user("valeri", "spanjbobi") << " " << perosn("valeri", "datuashvili");
 }
 class user{
 public:
