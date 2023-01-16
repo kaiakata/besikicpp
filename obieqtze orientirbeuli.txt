@@ -1,0 +1,98 @@
+1)ა
+2)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5;
+    double b = 4.7;
+    double c = static_cast<double>(a);
+    c = 7.8;
+    
+    int sum = c + b;
+    cout << sum;
+
+    return 0;
+}
+
+3)
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+int upperCase(string word)
+{
+    int lettersCount{0};
+    int a = word.length();
+    char array[a + 1];
+
+    strcpy(array, word.c_str());
+    for (int i = 0; i < a; i++)
+    {
+        if (array[i] >= 97 && array[i] <= 97 + 26)
+        {
+            lettersCount++;
+        }
+    }
+    return lettersCount;
+}
+int main()
+{
+    int x = upperCase("MaGaRi LeQtOrI xArT");
+    cout << x;
+    return 0;
+}
+
+4)
+#include <iostream>
+using namespace std;
+
+int fn1(){
+    cout << user("nikaa", "potato") << " " << perosn("nika", "melashvili");
+}
+class user{
+public:
+    string username;
+    string password;
+    user(){}
+    user(string Username, stirng Password){
+        this->Username = username;
+        this->Password = password;
+    }
+protected:
+    string firstname;
+    stirng lastname;
+};
+class person : public user{
+    person(){}
+    person(string Firstname, string Lastname)
+        this->Firstname = firstname;
+        this->Lastname = lastname;
+    }
+};
+
+int main(){
+    user u;
+    person p;
+    fn1();
+}
+5)
+#include <iostream>
+using namespace std;
+
+class fraction{
+public: 
+    int mricxveli;
+    int mnishvneli;
+fraction(){
+    this->mricxveli = 5;
+    this->mnishvneli = 10;
+}
+};
+
+int main(){
+    fraction f;
+    cout << f.mricxveli / f.mnishvneli;
+}
+
