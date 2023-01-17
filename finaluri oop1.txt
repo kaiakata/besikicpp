@@ -1,0 +1,185 @@
+#include <iostream>
+using namespace std;
+
+class Fraction
+{
+	private:											//gadatvirtet inkrementis operatori//es aris ++ sheidzleba shemxvdes -- sheidzleba  gamoyfa an gamravleba
+		int mricxveli, mnishvneli;
+	public:
+		Fraction(int mr, int mn)
+		{
+			this->mricxveli = mr;
+			this->mnishvneli = mn;
+		}
+		Fraction operator ++()
+		{
+			int s1 = this->mnishvneli + this->mricxveli;
+			int s2 = this->mnishvneli;
+			Fraction disp(s1, s2);
+			return disp;
+		}
+		void print()
+		{
+			cout << this->mricxveli << '/' << this->mnishvneli;
+		}
+};
+
+int main()
+{
+	Fraction a1(4, 5);
+	Fraction a2 = ++a1;
+	a2.print();
+	
+	return 0;
+}
+//4/5 +4/2
+/* #include <iostream>
+using namespace std;
+
+//mimatebis
+class Fraction
+{
+    private:
+        int mricxveli, mnishvneli;
+    public:
+        Fraction(int mr, int mn)
+        {
+            this->mricxveli = mr;
+            this->mnishvneli = mn;
+        }
+        Fraction operator+(Fraction x)
+        {
+            int s = this->mnishvneli * x.mnishvneli;
+            int s1 = (s / this->mnishvneli) * this->mricxveli;
+            int s2 = (s / x.mnishvneli) * x.mricxveli;
+            Fraction resp(s1 + s2, s);
+            return resp;
+        }
+        void print()
+        {
+            cout << this->mricxveli << '/' << this->mnishvneli;
+        }
+};
+
+int main()
+{
+    Fraction a1(4, 5);
+    Fraction a2(3, 7);
+    Fraction a3 = a1 + a2;
+    a3.print();
+
+    return 0;
+}  */
+	
+	
+	/* #include <iostream>
+using namespace std;
+
+//gamokleba
+class Fraction
+{
+    private:
+        int mricxveli, mnishvneli;
+    public:
+        Fraction(int mr, int mn)
+        {
+            this->mricxveli = mr;
+            this->mnishvneli = mn;
+        }
+        Fraction operator-(Fraction x)
+        {
+            int s = this->mnishvneli * x.mnishvneli;
+            int s1 = (s / this->mnishvneli) * this->mricxveli;
+            int s2 = (s / x.mnishvneli) * x.mricxveli;
+            Fraction resp(s1 - s2, s);
+            return resp;
+        }
+        void print()
+        {
+            cout << this->mricxveli << '/' << this->mnishvneli;
+        }
+};
+
+int main()
+{
+    Fraction a1(4, 5);
+    Fraction a2(3, 7);
+    Fraction a3 = a1 - a2;
+    a3.print();
+
+    return 0;
+}  */
+
+	/* #include <iostream>
+using namespace std;
+
+// gamravlebis
+class Fraction
+{
+    private:
+        int mricxveli, mnishvneli;
+    public:
+        Fraction(int mr, int mn)
+        {
+            this->mricxveli = mr;
+            this->mnishvneli = mn;
+        }
+        Fraction operator (Fraction x)
+        {
+            int s1 = this->mricxveli x.mricxveli;
+            int s2 = this->mnishvneli * x.mnishvneli;
+            Fraction resp(s1, s2);
+            return resp;
+        }
+        void print()
+        {
+            cout << this->mricxveli << '/' << this->mnishvneli;
+        }
+};
+
+int main()
+{
+    Fraction a1(4, 5);
+    Fraction a2(3, 7);
+    Fraction a3 = a1 * a2;
+    a3.print();
+
+    return 0;
+} */
+
+	/* #include <iostream>
+using namespace std;
+
+// gayofis
+class Fraction
+{
+    private:
+        int mricxveli, mnishvneli;
+    public:
+        Fraction(int mr, int mn)
+        {
+            this->mricxveli = mr;
+            this->mnishvneli = mn;
+        }
+        Fraction operator /(Fraction x)
+        {
+            int s1 = this->mricxveli * x.mnishvneli;
+            int s2 = this->mnishvneli * x.mricxveli;
+            Fraction resp(s1, s2);
+            return resp;
+        }
+        void print()
+        {
+            cout << this->mricxveli << '/' << this->mnishvneli;
+        }
+};
+
+int main()
+{
+    Fraction a1(4, 5);
+    Fraction a2(3, 7);
+    Fraction a3 = a1 / a2;
+    a3.print();
+
+    return 0;
+} */

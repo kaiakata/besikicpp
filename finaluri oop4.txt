@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int compareNums(int a, int b)			// gadatvirtet ori funqcia   wiladi an mtliani.
+{
+	return max(a, b);
+}
+
+double compareNums(double a, double b)
+{
+	return max(a, b);
+}
+
+int main()
+{
+	cout << "maqsimaluria: " << compareNums(2.5, 1.4) << endl;
+	cout << "maqsimaluria: " << compareNums(2, 7) << endl;
+	
+	return 0;
+}

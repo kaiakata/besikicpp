@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int xmovnebi(string a)
+{																//sityvashi  itvlis xmovnebis raodnebas.
+	int count = 0;						
+	int n = a.length();
+	char loverLetters[5] = {'a', 'e', 'i', 'o', 'u'};
+	char upperLetters[5] = {'A', 'E', 'I', 'O', 'U'};
+	
+	for(int i = 0; i < n; i++)
+	{
+		for(int j = 0; j < 5; j++)
+		{
+			if(a[i] == loverLetters[j] || a[i] == upperLetters[j])
+			{
+				count++;
+			}
+		}
+	}
+	return count;
+}
+
+int main()
+{
+	string word;
+	cout << "sheiyvanet raime sityva: ";
+	cin >> word;
+	int x = xmovnebi(word);
+	cout << "sul " << x << " xmovania\n";
+	
+	return 0;
+}

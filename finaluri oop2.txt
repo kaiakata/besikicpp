@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Person				//mocmeulai user romelic person klasis an shvilobili( memkvidre ) misi velebi gadmoaqvs usershi memkvidreobit. (protectit velebi)
+{
+	protected:
+		string firstName, lastName;
+};
+
+class User : protected Person
+{
+	public: 
+		string username, password;
+	User(string f, string l)
+	{
+		this->firstName = f;
+		this->lastName = l;
+	}
+	void print()
+	{
+		cout << this->firstName << ' ' << this->lastName << endl;
+	}
+};
+
+void printName()
+{
+	User a("saxeli", "gvari");
+	a.print();
+}
+
+int main()
+{
+	printName();
+	
+	return 0;
+}
